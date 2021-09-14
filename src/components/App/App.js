@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import AllArticles from '../AllArticles/AllArticles';
+import { Route } from 'react-router-dom';
 // import { getArticles } from '../../apiCalls';
 import { sampleArticles } from '../../sampleArticleData';
 
@@ -21,9 +22,13 @@ function App() {
       <header className="App-header">
         <h1>Your Happnins'</h1>
       </header>
-      <main>
-        <AllArticles articles={articles}/>
-      </main>
+      <Route exact path="/" render={() => {
+        return (
+          <main>
+            <AllArticles articles={articles}/>
+          </main>
+        )
+      }}/>
     </div>
   );
 }
