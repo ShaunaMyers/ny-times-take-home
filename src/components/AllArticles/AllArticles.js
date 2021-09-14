@@ -1,15 +1,15 @@
-import './Articles.css';
-import ArticleView from "../ArticleView/ArticleView"
-import FeatureArticle from '../FeatureArticle/FeatureArticle';
+import './AllArticles.css';
+import Article from "../Article/Article"
+// import FeatureArticle from '../FeatureArticle/FeatureArticle';
 import { Route, Link } from 'react-router-dom';
 
 
-const Articles= ({ articles }) => {
+const AllArticles= ({ articles }) => {
 
     // const featuredArticle = articles[0];
 
     const allArticles = articles.map(article => {
-        return <ArticleView key={article.title} title={article.title} image={article.multimedia[2].url}/>
+        return <Article key={article.title} title={article.title} image={article.multimedia[2].url}/>
     })
 
 
@@ -25,4 +25,4 @@ const Articles= ({ articles }) => {
      );
 }
  
-export default Articles;
+export default AllArticles;

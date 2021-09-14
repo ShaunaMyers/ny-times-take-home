@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import Articles from '../Articles/Articles';
+import AllArticles from '../AllArticles/AllArticles';
 // import { getArticles } from '../../apiCalls';
 import { sampleArticles } from '../../sampleArticleData';
 
@@ -22,7 +22,7 @@ function App() {
         <h1>Your Happnins'</h1>
       </header>
       <main>
-        <Articles articles={articles}/>
+        <AllArticles articles={articles}/>
       </main>
     </div>
   );
