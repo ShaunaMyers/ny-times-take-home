@@ -5,9 +5,9 @@ import FeatureArticle from '../FeatureArticle/FeatureArticle';
 
 const Articles= ({ articles }) => {
 
-    const featuredArticle = articles[0];
+    // const featuredArticle = articles[0];
 
-    const allArticles = articles.slice(1).map(article => {
+    const allArticles = articles.map(article => {
         return <ArticleView key={article.title} title={article.title} image={article.multimedia[2].url}/>
     })
 
@@ -15,7 +15,7 @@ const Articles= ({ articles }) => {
     return ( 
         <section className="all-articles">
             <article className="feature-article">
-                <FeatureArticle article={featuredArticle}/>
+                {/* <FeatureArticle article={featuredArticle}/> */}
             </article>
             <article className="right-articles">
                 {allArticles}

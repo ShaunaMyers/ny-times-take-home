@@ -1,10 +1,12 @@
 const FeatureArticle = (props) => {
 
-    const { article = {} } = props;
+    const { title = '' } = props.article;
+    const { url = ''} = props.multimedia[2];
 
     return ( 
         <section>
-            <h2>{article.title}</h2>
+            <h2>{title}</h2>
+            <img src={url}/>
         </section>
      );
 }
