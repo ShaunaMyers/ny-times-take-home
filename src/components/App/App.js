@@ -22,18 +22,16 @@ function App() {
   }, [])
 
   const displaySearchResults = (searchInput) => {
-    console.log('here')
     let foundArticles = []
     const foundByTitle = articles.filter(article => article.title.toLowerCase().split(' ').includes(searchInput.toLowerCase()))
-    foundByTitle.length && foundArticles.push(foundByTitle)
+    foundByTitle.length && foundArticles.push(...foundByTitle)
     const foundByAbstract = articles.filter(article => article.abstract.toLowerCase().split(' ').includes(searchInput.toLowerCase()))
     if (foundByAbstract.length) {
       foundByAbstract.forEach(article => {
         !foundArticles.includes(article) && foundArticles.push(article);
       })
     }
-    console.log('found articles', foundArticles)
-    setFilteredArticles(foundArticles)
+    setFilteredArticles(foundArticles);
   }
 
   return (
@@ -46,8 +44,10 @@ function App() {
         return (
           <main>
             <Search displaySearchResults={displaySearchResults}/>
-            <AllArticles articles={articles}/>
-            {/* <FeatureArticle articles={articles}/> */}
+            {!filteredArticles.length ?
+              <AllArticles articles={articles}/> :
+              <AllArticles articles={filteredArticles}/>
+            }
           </main>
         )
       }}/>
