@@ -1,8 +1,10 @@
-const FeatureArticle = ({ article }) => {
-    console.log('article', article)
+const FeatureArticle = (props) => {
+
+    const { article = {} } = props;
+
     return ( 
         <section>
-            <h2>hi</h2>
+            <h2>{article.title}</h2>
         </section>
      );
 }

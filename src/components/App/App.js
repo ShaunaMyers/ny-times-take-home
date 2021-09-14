@@ -14,7 +14,7 @@ function App() {
     // getArticles()
     //   .then(data => setArticles(data.results))
     //   .catch(error => console.log(error.message))
-  }, [articles])
+  }, [])
 
   return (
     <div className="App">
