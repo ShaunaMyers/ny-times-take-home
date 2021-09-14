@@ -1,7 +1,7 @@
 import './Search.css';
 import { useState } from 'react';
 
-const Search = () => {
+const Search = ({ displaySearchResults }) => {
 
     const [searchInput, setSearchInput] = useState('')
 
@@ -10,7 +10,7 @@ const Search = () => {
         <section>
             <form>
                 <input onChange={(e) => setSearchInput(e.target.value)} placeholder="Search by title or description" type="text" value={searchInput}></input>
-                <button>Search</button>
+                <button onClick={() => displaySearchResults(searchInput)}>Search</button>
             </form>
         </section>
      );
