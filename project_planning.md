@@ -1,19 +1,48 @@
+- [x] Research API- check in the browser and postman to see what you're getting in the response
+- [x] Create MVP for phase 1
+- [x] Create phase 2 with some "nice to have" features
+- [x] Add links to design inspirations and describe what you like about each one
+- [ ] Wireframing 
+
+
 ### At a minimum, you must show:
 
+#### Phase 1
+
 - A list of articles
-  - Do they have a pic and description included? (research API- check in the browser and PostMan to see what you're getting in the response)
+  - User should see articles displayed on the home page
   
 - A “detailed” view for each article (as opposed to summary/list view)
   - Will need a specific component and Router view for each article so that a user can click on the article and see it in more detail
-  - If there isn't a title/summary then I can description then I can shorten the description and use the shortened description to entice a user to click on the article to see more
+  - Show title with photo
   
 - Articles in the list must link to the detailed article view you create
-  - When user clicks on article it takes them to a detailed view using React Router
+  - When user clicks on article it takes them to a detailed view- using React Router
   
-- Some sort of search, filter, OR sort
+- Search articles for specific article(s)
   - Allow user to search for articles:
     - By keyword in article description/title (* priority * because as a user I would want to find news relating to something I heard about...generally we hear from some other platform or from a person about a story and then we go look it up)
-    - Sort and/or search By date (as a user I would want to know what has happened today or recently...or maybe I want to see what happened on a particular day
+
+- Mobile Responsiveness
+  - Application layout should adjust to the user's device
+
+- Basic accessibility
+  - Hover styling on all clickable elements
+
+#### Phase 2 
+
+- User should be able to click header and return home
+
+- User should see a return home button on an Article's detailed view that will take them back to the home page
+
+- Allow user to filter articles by date
+  - Sort and/or search By date (as a user I would want to know what has happened today or recently...or maybe I want to see what happened on a particular day
+
+- Accessibility
+  - Focusable elements/tab through the page
+  - Color 
+  - Font 
+
 
 ### Application Design Inspirations:
   - All color schemes seem to be mostly white with a small accent color here and there. This makes sense for a news site. You would want to keep it crisp, fairly formal, and easy to navigate and read. I think I will stick to this theme (at least initially and then think about adding a different color scheme if time permits).
