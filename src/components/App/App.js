@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import AllArticles from '../AllArticles/AllArticles';
 import ArticleView from '../ArticleView/ArticleView';
+import Search from '../Search/Search';
 import { Route } from 'react-router-dom';
 // import { getArticles } from '../../apiCalls';
 import { sampleArticles } from '../../sampleArticleData';
@@ -28,6 +29,7 @@ function App() {
       <Route exact path="/" render={() => {
         return (
           <main>
+            <Search />
             <AllArticles articles={articles}/>
             {/* <FeatureArticle articles={articles}/> */}
           </main>
