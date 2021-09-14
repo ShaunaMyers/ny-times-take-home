@@ -9,6 +9,8 @@ const AllArticles= ({ articles }) => {
 
     // const featuredArticle = articles[0];
 
+    console.log('articles in all', articles)
+
     const allArticles = articles.map(article => {
         return <Article key={article.title} title={article.title} image={article.multimedia[2].url}/>
     })
