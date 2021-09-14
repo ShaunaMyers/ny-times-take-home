@@ -1,8 +1,14 @@
 import './ArticleView.css'
 
-const ArticleView = (props) => {
+const ArticleView = ({ article }) => {
 
-    const { article = {} } = props
+    // const { article = {} } = props
+
+    const formatDate = () => {
+        const separateDate = article.published_date.split('T')
+        const splitDate = separateDate[0].split('-')
+        return `${splitDate[1]}/${splitDate[2]}/${splitDate[0]}`;
+    }
 
     console.log('artice view', article)
     return ( 
@@ -13,7 +19,7 @@ const ArticleView = (props) => {
             <div className="right-article-view">
                 <h3>{article.title}</h3>
                 <p className="small-details">{article.byline}</p>
-                <p className="small-details">{article.published_date}</p>
+                <p className="small-details">{formatDate()}</p>
                 <p>{article.abstract}</p>
                 <p className="small-details">Read full article <a href={article.url}>here</a></p>
             </div>
