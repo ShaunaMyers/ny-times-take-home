@@ -1,0 +1,9 @@
+.all-articles {
+  display: flex;
+  justify-content: space-around;
+}
+
+.right-articles {
+  display: flex;
+  flex-direction: column;
+}
