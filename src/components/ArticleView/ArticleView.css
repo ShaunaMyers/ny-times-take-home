@@ -30,3 +30,9 @@
   font-size: 20px;
   margin: 0.5%;
 }
+
+@media only screen and (max-width: 850px) {
+  .detailed-article-view {
+    flex-direction: column;
+  }
+}
