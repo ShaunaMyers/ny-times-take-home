@@ -36,12 +36,13 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Your Happnins'</h1>
-      </header>
       {!articles.length && <p>Loading...</p>}
       <Route exact path="/" render={() => {
         return (
+          <>
+          <header className="App-header">
+            <h1>Your Happnins'</h1>
+          </header>
           <main>
             <Search displaySearchResults={displaySearchResults}/>
             {!filteredArticles.length ?
@@ -49,16 +50,20 @@ function App() {
               <AllArticles articles={filteredArticles}/>
             }
           </main>
+          </>
         )
       }}/>
       <Route exact path="/:title" render={({ match }) => {
-          console.log('here')
           const selectedTitle = match.params.title
-          console.log('selected title', selectedTitle)
           const foundArticle = articles.find(article => article.title === selectedTitle)
-          console.log('found article', foundArticle)
           return (
-              <ArticleView article={foundArticle}/>
+            <section>
+              <header className="article-view-header">
+                <h1>Your Happnins'</h1>
+                <button className="return-home-button">Return Home</button>
+              </header>
+                <ArticleView article={foundArticle}/>
+            </section>
           )
       }}/>
     </div>
