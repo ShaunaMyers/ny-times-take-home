@@ -10,7 +10,8 @@ import { sampleArticles } from '../../sampleArticleData';
 
 function App() {
 
-  const [articles, setArticles] = useState([])
+  const [articles, setArticles] = useState([]);
+  const [filteredArticles, setFilteredArticles] = useState([]);
 
   useEffect(() => {
     setArticles(sampleArticles.results)
@@ -19,6 +20,21 @@ function App() {
     //   .then(data => setArticles(data.results))
     //   .catch(error => console.log(error.message))
   }, [])
+
+  const displaySearchResults = (searchInput) => {
+    console.log('here')
+    let foundArticles = []
+    const foundByTitle = articles.filter(article => article.title.toLowerCase().split(' ').includes(searchInput.toLowerCase()))
+    foundByTitle.length && foundArticles.push(foundByTitle)
+    const foundByAbstract = articles.filter(article => article.abstract.toLowerCase().split(' ').includes(searchInput.toLowerCase()))
+    if (foundByAbstract.length) {
+      foundByAbstract.forEach(article => {
+        !foundArticles.includes(article) && foundArticles.push(article);
+      })
+    }
+    console.log('found articles', foundArticles)
+    setFilteredArticles(foundArticles)
+  }
 
   return (
     <div className="App">
@@ -29,7 +45,7 @@ function App() {
       <Route exact path="/" render={() => {
         return (
           <main>
-            <Search />
+            <Search displaySearchResults={displaySearchResults}/>
             <AllArticles articles={articles}/>
             {/* <FeatureArticle articles={articles}/> */}
           </main>
