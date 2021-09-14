@@ -1,7 +1,8 @@
 import './AllArticles.css';
-import Article from "../Article/Article"
+import Article from '../Article/Article';
+import ArticleView from '../ArticleView/ArticleView';
 // import FeatureArticle from '../FeatureArticle/FeatureArticle';
-import { Route, Link } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
 
 
 const AllArticles= ({ articles }) => {
@@ -15,9 +16,6 @@ const AllArticles= ({ articles }) => {
 
     return ( 
         <section className="all-articles">
-            <article className="feature-article">
-                {/* <FeatureArticle article={featuredArticle}/> */}
-            </article>
             <article className="right-articles">
                 {allArticles}
             </article>

@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import AllArticles from '../AllArticles/AllArticles';
+import ArticleView from '../ArticleView/ArticleView';
 import { Route } from 'react-router-dom';
 // import { getArticles } from '../../apiCalls';
 import { sampleArticles } from '../../sampleArticleData';
@@ -28,6 +29,16 @@ function App() {
             <AllArticles articles={articles}/>
           </main>
         )
+      }}/>
+      <Route exact path="/:title" render={({ match }) => {
+          console.log('here')
+          const selectedTitle = match.params.title
+          console.log('selected title', selectedTitle)
+          const foundArticle = articles.find(article => article.title = selectedTitle)
+          console.log('found article', foundArticle)
+          return (
+              <ArticleView article={foundArticle}/>
+          )
       }}/>
     </div>
   );
