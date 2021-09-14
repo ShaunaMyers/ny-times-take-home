@@ -5,12 +5,16 @@ const Search = ({ displaySearchResults }) => {
 
     const [searchInput, setSearchInput] = useState('')
 
+    const handleSearchResults = (e) => {
+        e.preventDefault();
+        displaySearchResults(searchInput);
+    }
 
     return ( 
         <section>
             <form>
                 <input onChange={(e) => setSearchInput(e.target.value)} placeholder="Search by title or description" type="text" value={searchInput}></input>
-                <button onClick={() => displaySearchResults(searchInput)}>Search</button>
+                <button onClick={handleSearchResults}>Search</button>
             </form>
         </section>
      );
