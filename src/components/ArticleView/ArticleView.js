@@ -15,7 +15,7 @@ const ArticleView = (props) => {
                 <p className="small-details">{article.byline}</p>
                 <p className="small-details">{article.published_date}</p>
                 <p>{article.abstract}</p>
-                <p className="small-details">Read full article <a href={article.uri}>here</a></p>
+                <p className="small-details">Read full article <a href={article.url}>here</a></p>
             </div>
         </article>
      );
