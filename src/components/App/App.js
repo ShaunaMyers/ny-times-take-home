@@ -5,6 +5,7 @@ import ArticleView from '../ArticleView/ArticleView';
 import { Route } from 'react-router-dom';
 // import { getArticles } from '../../apiCalls';
 import { sampleArticles } from '../../sampleArticleData';
+// import FeatureArticle from '../FeatureArticle/FeatureArticle';
 
 function App() {
 
@@ -23,10 +24,12 @@ function App() {
       <header className="App-header">
         <h1>Your Happnins'</h1>
       </header>
+      {!articles.length && <p>Loading...</p>}
       <Route exact path="/" render={() => {
         return (
           <main>
             <AllArticles articles={articles}/>
+            {/* <FeatureArticle articles={articles}/> */}
           </main>
         )
       }}/>
@@ -34,7 +37,7 @@ function App() {
           console.log('here')
           const selectedTitle = match.params.title
           console.log('selected title', selectedTitle)
-          const foundArticle = articles.find(article => article.title = selectedTitle)
+          const foundArticle = articles.find(article => article.title === selectedTitle)
           console.log('found article', foundArticle)
           return (
               <ArticleView article={foundArticle}/>
