@@ -8,3 +8,22 @@
   text-align: center;
   width: 900px;
 }
+
+.single-article > img {
+  width: 20%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .single-article {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .single-article > img {
+    width: 200px;
+  }
+
+  .single-article-title {
+    width: 50%;
+  }
+}
