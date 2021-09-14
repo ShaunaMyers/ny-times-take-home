@@ -1,0 +1,10 @@
+.single-article {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.single-article-title {
+  text-align: center;
+  width: 900px;
+}
