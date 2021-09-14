@@ -2,7 +2,7 @@
 - [x] Create MVP for phase 1
 - [x] Create phase 2 with some "nice to have" features
 - [x] Add links to design inspirations and describe what you like about each one
-- [ ] Wireframing 
+- [x] [Wireframing](https://miro.com/welcomeonboard/eWdlTW1KTHpHeDlXem9oUVFUNGM0TDJPbm5ISURFbU1rWUVkalVqVnQ2SjNVSUxaQUs0RUFKZG1qZGVJc0R6RXwzMDc0NDU3MzU3NzAyMTI5NTQw?invite_link_id=622521353271)
 
 
 ### At a minimum, you must show:
@@ -42,6 +42,10 @@
   - Focusable elements/tab through the page
   - Color 
   - Font 
+
+### Phase 3
+
+- Add tabs or a drop down menu at top of nav bar, that when clicked would show articles from particular sections: arts, sports, business, food, health, movies, world
 
 
 ### Application Design Inspirations:
