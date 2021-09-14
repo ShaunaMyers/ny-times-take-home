@@ -8,3 +8,15 @@ h1 {
   font-size: 40px;
   padding-left: 2%;
 }
+
+.article-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.return-home-button {
+  border-radius: 8px;
+  margin-right: 3%;
+  padding: 0.5%;
+}
