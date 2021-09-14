@@ -1,7 +1,16 @@
-const Articles
- = () => {
+import ArticleView from "../ArticleView/ArticleView"
+
+
+const Articles= ({ articles }) => {
+
+    const allArticles = articles.map(article => {
+        return <ArticleView key={article.title} title={article.title}/>
+    })
+
     return ( 
-        <h2>Articles</h2>
+        <>
+            {allArticles}
+        </>
      );
 }
  
