@@ -1,0 +1,14 @@
+form {
+  min-width: 450px;
+}
+
+input {
+  margin-bottom: 20%;
+  height: 22px;
+  min-width: 300px;
+}
+
+button {
+  font-size: 20px;
+  margin-left: 2%;
+}
