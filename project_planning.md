@@ -1,8 +1,9 @@
-- [x] Research API- check in the browser and postman to see what you're getting in the response
+- [x] Research API- check in the browser and postman to see what you're getting in the response. View sample [here](https://github.com/ShaunaMyers/ny-times-take-home/blob/main/sample_request_response.js)
 - [x] Create MVP for phase 1
 - [x] Create phase 2 with some "nice to have" features
 - [x] Add links to design inspirations and describe what you like about each one
 - [x] [Wireframing](https://miro.com/welcomeonboard/eWdlTW1KTHpHeDlXem9oUVFUNGM0TDJPbm5ISURFbU1rWUVkalVqVnQ2SjNVSUxaQUs0RUFKZG1qZGVJc0R6RXwzMDc0NDU3MzU3NzAyMTI5NTQw?invite_link_id=622521353271)
+- [x] [Project Board](https://github.com/ShaunaMyers/ny-times-take-home/projects/1)
 
 
 ### At a minimum, you must show:
