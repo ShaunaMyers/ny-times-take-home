@@ -1,11 +1,7 @@
 import './AllArticles.css';
 import Article from '../Article/Article';
-import ArticleView from '../ArticleView/ArticleView';
-
 
 const AllArticles= ({ articles }) => {
-
-    console.log('articles in all', articles)
 
     const allArticles = articles.map(article => {
         return <Article key={article.title} title={article.title} image={article.multimedia[2].url}/>
