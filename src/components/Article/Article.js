@@ -1,15 +1,15 @@
 import './Article.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Article = ({ title, image }) => {
     return ( 
         <article>
-            <Link to={`/${title}`} className="single-article">
+            <NavLink to={`/${title}`} className="single-article">
                 <img src={image}/>
                 <div className="single-article-title">
                     <h2>{title}</h2>
                 </div>
-            </Link>
+            </NavLink>
         </article>
      );
 }
