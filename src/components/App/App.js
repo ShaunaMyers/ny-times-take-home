@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import AllArticles from '../AllArticles/AllArticles';
 import ArticleView from '../ArticleView/ArticleView';
 import Search from '../Search/Search';
-import { Route, Link } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 // import { getArticles } from '../../apiCalls';
 import { sampleArticles } from '../../sampleArticleData';
 // import FeatureArticle from '../FeatureArticle/FeatureArticle';
@@ -60,9 +60,9 @@ function App() {
             <section>
               <header className="article-view-header">
                 <h1>Your Happnins'</h1>
-                <Link to="/" className="return-home-link">
+                <NavLink to="/" className="return-home-navlink">
                   <button className="return-home-button">Return Home</button>
-                </Link>
+                </NavLink>
               </header>
                 <ArticleView article={foundArticle}/>
             </section>
