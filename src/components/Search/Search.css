@@ -1,3 +1,11 @@
+.form-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-bottom: 10%;
+}
+
 form {
   min-width: 700px;
 }
@@ -7,15 +15,32 @@ input {
   font-size: 25px;
   margin-bottom: 20%;
   height: 40px;
+  margin-bottom: 5%;
   min-width: 500px;
 }
 
-button {
+.search-button {
   border-radius: 7px;
   font-size: 25px;
   margin-left: 2%;
   padding: 1.2%;
   min-width: 130px;
+}
+
+.show-all-button {
+  background-color: white;
+  color: purple;
+  border: none;
+  border-radius: 7px;
+  font-size: 25px;
+  padding: 2%;
+  text-decoration: underline;
+  width: 230px;
+}
+
+.show-all-button:hover {
+  color: blue;
+  background-color: white;
 }
 
 @media only screen and (max-width: 500px) {
