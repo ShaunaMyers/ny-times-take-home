@@ -8,7 +8,6 @@
 .left-article-view {
   display: flex;
   flex-direction: column;
-  font-size: 15px;
   width: 70%;
 }
 
@@ -20,7 +19,7 @@
 .right-article-view {
   display: flex;
   flex-direction: column;
-  font-size: 30px;
+  font-size: 35px;
   min-width: 20%;
   padding: 5%;
   text-align: center;
@@ -31,12 +30,20 @@
 }
 
 .small-details {
-  font-size: 20px;
+  font-size: 25px;
   margin: 0.5%;
 }
 
 @media only screen and (max-width: 850px) {
   .detailed-article-view {
     flex-direction: column;
+  }
+
+  .right-article-view {
+    font-size: 30px;
+  }
+
+  .small-details {
+    font-size: 20px;
   }
 }
