@@ -23,7 +23,7 @@
 
 ## Contributors
   
-Turing School of Software & Design https://github.com/turingschool-examples
+[Turing School of Software & Design](https://turing.edu/)
 
 ## Resources
   [Turing-ny-times-take-home](https://mod4.turing.edu/projects/take_home/)
