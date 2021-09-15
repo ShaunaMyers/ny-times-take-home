@@ -1,13 +1,9 @@
 import './AllArticles.css';
 import Article from '../Article/Article';
 import ArticleView from '../ArticleView/ArticleView';
-// import FeatureArticle from '../FeatureArticle/FeatureArticle';
-// import { Route } from 'react-router-dom';
 
 
 const AllArticles= ({ articles }) => {
-
-    // const featuredArticle = articles[0];
 
     console.log('articles in all', articles)
 
