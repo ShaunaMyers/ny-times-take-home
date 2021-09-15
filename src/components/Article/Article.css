@@ -1,14 +1,25 @@
 .single-article {
+  color: inherit;
   display: flex;
   justify-content: space-between;
   margin-bottom: 5%;
+  text-decoration: inherit;
+}
+
+.single-article:hover {
+  cursor: pointer;
+  background-color: rgb(242, 239, 239);
 }
 
 .single-article-title {
   font-size: 20px;
-  text-align: center;
   margin-left: 2%;
+  text-align: center;
   width: 900px;
+}
+
+.single-article-title:hover {
+  color: rgb(96, 13, 96);
 }
 
 .single-article > img {
