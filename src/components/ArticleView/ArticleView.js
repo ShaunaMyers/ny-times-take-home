@@ -12,7 +12,7 @@ const ArticleView = ({ article }) => {
     return ( 
         <article className="detailed-article-view">
             <div className="left-article-view">
-                <img src={article.multimedia[0].url}/>
+                <img src={article.multimedia[0].url} alt="caption here"/>
             </div>
             <div className="right-article-view">
                 <h3>{article.title}</h3>

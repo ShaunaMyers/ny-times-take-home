@@ -4,8 +4,8 @@ import AllArticles from '../AllArticles/AllArticles';
 import ArticleView from '../ArticleView/ArticleView';
 import Search from '../Search/Search';
 import { Route, NavLink } from 'react-router-dom';
-// import { getArticles } from '../../apiCalls';
-import { sampleArticles } from '../../sampleArticleData';
+import { getArticles } from '../../apiCalls';
+// import { sampleArticles } from '../../sampleArticleData';
 // import FeatureArticle from '../FeatureArticle/FeatureArticle';
 
 function App() {
@@ -14,11 +14,11 @@ function App() {
   const [filteredArticles, setFilteredArticles] = useState([]);
 
   useEffect(() => {
-    setArticles(sampleArticles.results)
+    // setArticles(sampleArticles.results)
     // setFeatureArticle(sampleArticles.results[0])
-    // getArticles()
-    //   .then(data => setArticles(data.results))
-    //   .catch(error => console.log(error.message))
+    getArticles()
+      .then(data => setArticles(data.results))
+      .catch(error => console.log(error.message))
   }, [])
 
   const displaySearchResults = (searchInput) => {
