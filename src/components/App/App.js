@@ -34,6 +34,10 @@ function App() {
     setFilteredArticles(foundArticles);
   }
 
+  const handleClearResults = () => {
+    setFilteredArticles([])
+  }
+
   return (
     <div className="App">
       {!articles.length && <p>Loading...</p>}
@@ -44,7 +48,7 @@ function App() {
             <h1>Your Happnins'</h1>
           </header>
           <main>
-            <Search displaySearchResults={displaySearchResults}/>
+            <Search displaySearchResults={displaySearchResults} handleClearResults={handleClearResults} filteredArticles={filteredArticles}/>
             {!filteredArticles.length ?
               <AllArticles articles={articles}/> :
               <AllArticles articles={filteredArticles}/>
