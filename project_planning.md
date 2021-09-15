@@ -35,6 +35,12 @@
 
 - User should see a return home button on an Article's detailed view that will take them back to the home page
 
+- User should see a link to show them all articles after they have clicked search (if the search is successful and returns results)
+
+- User should see messages
+  - When no search results exist after trying to search
+  - Where there are errors loading articles or a single article
+
 - Allow user to filter articles by date
   - Sort and/or search By date (as a user I would want to know what has happened today or recently...or maybe I want to see what happened on a particular day
 
