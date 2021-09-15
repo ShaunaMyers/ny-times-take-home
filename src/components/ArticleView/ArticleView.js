@@ -2,8 +2,6 @@ import './ArticleView.css'
 
 const ArticleView = ({ article }) => {
 
-    // const { article = {} } = props
-
     const formatDate = () => {
         const separateDate = article.published_date.split('T')
         const splitDate = separateDate[0].split('-')
