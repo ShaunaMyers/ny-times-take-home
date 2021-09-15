@@ -5,7 +5,9 @@
 }
 
 .single-article-title {
+  font-size: 20px;
   text-align: center;
+  margin-left: 2%;
   width: 900px;
 }
 
