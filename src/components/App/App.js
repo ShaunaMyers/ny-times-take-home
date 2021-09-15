@@ -40,7 +40,7 @@ function App() {
       <Route exact path="/" render={() => {
         return (
           <>
-          <header className="App-header">
+          <header>
             <h1>Your Happnins'</h1>
           </header>
           <main>
@@ -59,7 +59,9 @@ function App() {
           return (
             <section>
               <header className="article-view-header">
-                <h1>Your Happnins'</h1>
+                <NavLink to="/" className="details-header-link">
+                  <h1>Your Happnins'</h1>
+                </NavLink>
                 <NavLink to="/" className="return-home-navlink">
                   <button className="return-home-button">Return Home</button>
                 </NavLink>
