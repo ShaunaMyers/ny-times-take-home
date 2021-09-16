@@ -12,13 +12,15 @@ function App() {
 
   const [articles, setArticles] = useState([]);
   const [filteredArticles, setFilteredArticles] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
+    setError('');
     // setArticles(sampleArticles.results)
     // setFeatureArticle(sampleArticles.results[0])
     getArticles()
       .then(data => setArticles(data.results))
-      .catch(error => console.log(error.message))
+      .catch(() => setError('Oops, problem loading articles. Please refresh the page.'))
   }, [])
 
   const displaySearchResults = (searchInput) => {
@@ -40,7 +42,6 @@ function App() {
 
   return (
     <div className="App">
-      {!articles.length && <p>Loading...</p>}
       <Route exact path="/" render={() => {
         return (
           <>
@@ -53,6 +54,8 @@ function App() {
               <AllArticles articles={articles}/> :
               <AllArticles articles={filteredArticles}/>
             }
+            {error && <p className="error-message">{error}</p>}
+            {!articles.length && !error && <p className="loading-message">Loading...</p>}
           </main>
           </>
         )
