@@ -34,6 +34,14 @@
   margin: 0.5%;
 }
 
+a:hover {
+  color: purple;
+}
+
+a:visited {
+  color: purple;
+}
+
 @media only screen and (max-width: 850px) {
   .detailed-article-view {
     flex-direction: column;
