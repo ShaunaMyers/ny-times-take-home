@@ -16,6 +16,11 @@ h1 {
   padding: 0.5% 0 2% 2.5%;
 }
 
+.loading-message {
+  color: rgb(159, 48, 159);
+  font-size: 25px;
+}
+
 .article-view-header {
   display: flex;
   justify-content: space-between;
