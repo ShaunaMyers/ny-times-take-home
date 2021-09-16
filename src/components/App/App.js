@@ -13,6 +13,7 @@ function App() {
 
   const [articles, setArticles] = useState([]);
   const [filteredArticles, setFilteredArticles] = useState([]);
+  const [searchMessage, setSearchMessage] = useState('')
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -25,16 +26,24 @@ function App() {
   }, [])
 
   const displaySearchResults = (searchInput) => {
+    setSearchMessage('');
     let foundArticles = []
+
     const foundByTitle = articles.filter(article => article.title.toLowerCase().split(' ').includes(searchInput.toLowerCase()))
     foundByTitle.length && foundArticles.push(...foundByTitle)
+
     const foundByAbstract = articles.filter(article => article.abstract.toLowerCase().split(' ').includes(searchInput.toLowerCase()))
+
     if (foundByAbstract.length) {
       foundByAbstract.forEach(article => {
         !foundArticles.includes(article) && foundArticles.push(article);
       })
     }
-    setFilteredArticles(foundArticles);
+    if (!foundArticles.length) {
+      setSearchMessage('No results match your search. Please try again.')
+    } else {
+      setFilteredArticles(foundArticles);
+    }
   }
 
   const handleClearResults = () => {
@@ -50,6 +59,7 @@ function App() {
             <h1>Your Happnins'</h1>
           </header>
           <main>
+            {searchMessage && <p className="search-message">{searchMessage}</p>}
             {error ?
             <Error error={error}/> :
             <Search displaySearchResults={displaySearchResults} handleClearResults={handleClearResults} filteredArticles={filteredArticles}/>
