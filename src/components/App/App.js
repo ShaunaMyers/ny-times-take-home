@@ -52,7 +52,6 @@ function App() {
           <main>
             {error ?
             <Error error={error}/> :
-            
             <Search displaySearchResults={displaySearchResults} handleClearResults={handleClearResults} filteredArticles={filteredArticles}/>
             }
             {!filteredArticles.length ?
