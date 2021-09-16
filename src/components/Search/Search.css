@@ -2,7 +2,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   margin-bottom: 10%;
 }
 
@@ -29,7 +28,7 @@ input {
 
 .show-all-button {
   background-color: white;
-  color: purple;
+  color: blue;
   border: none;
   border-radius: 7px;
   font-size: 25px;
@@ -39,7 +38,7 @@ input {
 }
 
 .show-all-button:hover {
-  color: blue;
+  color: purple;
   background-color: white;
 }
 
