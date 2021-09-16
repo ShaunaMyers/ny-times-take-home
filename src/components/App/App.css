@@ -16,7 +16,8 @@ h1 {
   padding: 0.5% 0 2% 2.5%;
 }
 
-.loading-message {
+.loading-message,
+.search-message {
   color: rgb(159, 48, 159);
   font-size: 25px;
 }
