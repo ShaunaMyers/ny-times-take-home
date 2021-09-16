@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import AllArticles from '../AllArticles/AllArticles';
 import ArticleView from '../ArticleView/ArticleView';
 import Search from '../Search/Search';
+import Error from '../Error/Error';
 import { Route, NavLink } from 'react-router-dom';
 import { getArticles } from '../../apiCalls';
 // import { sampleArticles } from '../../sampleArticleData';
@@ -54,8 +55,12 @@ function App() {
               <AllArticles articles={articles}/> :
               <AllArticles articles={filteredArticles}/>
             }
-            {error && <p className="error-message">{error}</p>}
-            {!articles.length && !error && <p className="loading-message">Loading...</p>}
+            {error && 
+            <Error error={error}/>
+            }
+            {!articles.length && 
+            !error && <p className="loading-message">Loading...</p>
+            }
           </main>
           </>
         )
