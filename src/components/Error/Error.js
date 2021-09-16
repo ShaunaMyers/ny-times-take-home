@@ -1,7 +1,9 @@
-const Error = ({ errorMessage }) => {
+import './Error.css';
+
+const Error = ({ error }) => {
     return ( 
         <article>
-            <p>{errorMessage}</p>
+            <p className="error-message">{error}</p>
         </article>
      );
 }
