@@ -50,13 +50,14 @@ function App() {
             <h1>Your Happnins'</h1>
           </header>
           <main>
+            {error ?
+            <Error error={error}/> :
+            
             <Search displaySearchResults={displaySearchResults} handleClearResults={handleClearResults} filteredArticles={filteredArticles}/>
+            }
             {!filteredArticles.length ?
               <AllArticles articles={articles}/> :
               <AllArticles articles={filteredArticles}/>
-            }
-            {error && 
-            <Error error={error}/>
             }
             {!articles.length && 
             !error && <p className="loading-message">Loading...</p>
