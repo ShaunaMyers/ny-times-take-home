@@ -1,13 +1,19 @@
 .all-articles {
-  /* float: right; */
   display: flex;
   justify-content: space-around;
-  /* width: 60%; */
+  padding: 2%;
 }
 
 .right-articles {
   display: flex;
   flex-direction: column;
-  margin-top: 1.5%;
+  margin-top: 2.5%;
   width: 40%;
+}
+
+@media only screen and (max-width: 900px) {
+  .all-articles {
+    align-items: center;
+    flex-direction: column;
+  }
 }
