@@ -4,6 +4,7 @@
   justify-content: space-between;
   margin-bottom: 5%;
   text-decoration: inherit;
+  /* clear: both; */
 }
 
 .single-article:hover {
@@ -23,6 +24,8 @@
 }
 
 .single-article > img {
+  border-radius: 5px;
+  border: 1px solid black;
   width: 20%;
 }
 

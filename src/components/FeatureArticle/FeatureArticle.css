@@ -1,0 +1,19 @@
+.feature-article-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  width: 30%;
+}
+
+.feature-article-section > img {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 150%;
+}
+
+.feature-article-section > h2 {
+  font-size: 30px;
+  text-align: center;
+  width: 700px;
+}
