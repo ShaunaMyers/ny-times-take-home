@@ -13,7 +13,7 @@ const FeatureArticle = ({ article }) => {
         {article &&
         <section className="feature-article-section">
             <h2>{article.title}</h2>
-            <img src={article.multimedia[0].url}/>
+            <img src={article.multimedia[0].url} alt="caption here"/>
             <div className="full-article-view">
                 <p className="small-details">{article.byline}</p>
                 <p className="small-details">{formatDate()}</p>
