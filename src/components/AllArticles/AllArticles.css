@@ -1,9 +1,13 @@
 .all-articles {
+  /* float: right; */
   display: flex;
   justify-content: space-around;
+  /* width: 60%; */
 }
 
 .right-articles {
   display: flex;
   flex-direction: column;
+  margin-top: 1.5%;
+  width: 40%;
 }
