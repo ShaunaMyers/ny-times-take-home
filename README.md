@@ -1,7 +1,7 @@
 # NY Times Take Home Assignment
 
 ## Overview
- The goal of this task was to simulate a take home challenge that one might receive during the interview process. Application was completed in 8 hours. Time managment and planning were prioritized, as well as explaining the process and reasoning behind decisions.
+ The goal of this task was to simulate a take home challenge that one might receive during the interview process. Basic application was completed in 8 hours with an extension of 4 hours for added features. Time managment and planning were prioritized, as well as explaining the process and reasoning behind decisions.
  
  
 ## View the project planning document [here](https://github.com/ShaunaMyers/ny-times-take-home/blob/main/project_planning.md)
