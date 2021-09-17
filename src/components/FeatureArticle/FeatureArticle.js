@@ -1,13 +1,9 @@
-const FeatureArticle = ({ articles }) => {
-
-    const featuredArticle = articles[0];
-    // const { article = {} } = props.article;
-    console.log('article in feature', featuredArticle);
+const FeatureArticle = ({ article }) => {
+    
     return ( 
         <section>
-            {/* <h2>hi</h2> */}
-            <h2>{featuredArticle.title}</h2>
-            {/* <img src={url}/> */}
+            <h2>{article && article.title}</h2>
+            <img src={article && article.multimedia[0].url}/>
         </section>
      );
 }
