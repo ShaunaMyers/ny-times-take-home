@@ -17,7 +17,7 @@ const FeatureArticle = ({ article }) => {
             <div className="full-article-view">
                 <p className="small-details">{article.byline}</p>
                 <p className="small-details">{formatDate()}</p>
-                <p>{article.abstract}</p>
+                <p className="feature-abstract">{article.abstract}</p>
                 <p className="small-details">Read full article <a href={article.url}>here</a></p>
                 </div>
         </section>
