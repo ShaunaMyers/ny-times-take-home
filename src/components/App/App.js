@@ -7,7 +7,7 @@ import Error from '../Error/Error';
 import { Route, NavLink } from 'react-router-dom';
 import { getArticles } from '../../apiCalls';
 // import { sampleArticles } from '../../sampleArticleData';
-// import FeatureArticle from '../FeatureArticle/FeatureArticle';
+import FeatureArticle from '../FeatureArticle/FeatureArticle';
 
 function App() {
 
@@ -65,7 +65,10 @@ function App() {
             <Search displaySearchResults={displaySearchResults} handleClearResults={handleClearResults} filteredArticles={filteredArticles}/>
             }
             {!filteredArticles.length ?
-              <AllArticles articles={articles}/> :
+              <section>
+                <FeatureArticle article={articles[0]}/>
+                <AllArticles articles={articles}/>
+              </section> :
               <AllArticles articles={filteredArticles}/>
             }
             {!articles.length && 
