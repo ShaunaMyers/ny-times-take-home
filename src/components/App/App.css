@@ -55,6 +55,10 @@ h1 {
   color: rgb(106, 105, 108);
 }
 
+.details-header-link:visited {
+  color: black;
+}
+
 button:hover {
   color: white;
   cursor: pointer;
