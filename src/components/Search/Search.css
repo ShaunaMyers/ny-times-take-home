@@ -12,7 +12,6 @@ form {
 input {
   border-radius: 5px;
   font-size: 25px;
-  margin-bottom: 20%;
   height: 40px;
   margin-bottom: 5%;
   min-width: 500px;
@@ -42,17 +41,17 @@ input {
   background-color: white;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
   form {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 300px;
+    /* min-width: 250px; */
     margin: 5%;
   }
 
   input {
-    margin: 5%;
+    min-width: 400px;
   }
 }

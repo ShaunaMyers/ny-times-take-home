@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding-left: 5%;
+  padding: 0 5% 5%;
   width: 30%;
 }
 
@@ -14,12 +14,28 @@
 
 .feature-article-section > h2 {
   font-size: 30px;
+  padding: 4%;
   text-align: center;
   width: 700px;
 }
 
+.feature-abstract {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10% 0;
+  width: 700px;
+}
+
 @media only screen and (max-width: 1250px) {
-  .feature-article-section > h2 {
+  .feature-article-section > h2,
+  .feature-abstract {
     width: 500px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .feature-article-section > h2,
+  .feature-abstract {
+    width: 400px;
   }
 }
