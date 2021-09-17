@@ -9,6 +9,7 @@
 To view our application on your local device:
 
      -Clone down this repository
+     -cd into ny-times-take-home
      -Run npm i in your terminal
      -Run npm start in your terminal
      -To view Cypress tests open a separate tab in your terminal and run npm run cypress
