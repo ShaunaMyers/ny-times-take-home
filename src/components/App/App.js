@@ -6,8 +6,6 @@ import Search from '../Search/Search';
 import Error from '../Error/Error';
 import { Route, NavLink } from 'react-router-dom';
 import { getArticles } from '../../apiCalls';
-// import { sampleArticles } from '../../sampleArticleData';
-import FeatureArticle from '../FeatureArticle/FeatureArticle';
 
 function App() {
 
@@ -18,8 +16,6 @@ function App() {
 
   useEffect(() => {
     setError('');
-    // setArticles(sampleArticles.results)
-    // setFeatureArticle(sampleArticles.results[0])
     getArticles()
       .then(data => setArticles(data.results))
       .catch(() => setError('Oops, problem loading articles. Please refresh the page.'))
@@ -65,8 +61,7 @@ function App() {
             <Search displaySearchResults={displaySearchResults} handleClearResults={handleClearResults} filteredArticles={filteredArticles}/>
             }
             {!filteredArticles.length ?
-              <section>
-                <FeatureArticle article={articles[0]}/>
+              <section className="main-article-section">
                 <AllArticles articles={articles}/>
               </section> :
               <AllArticles articles={filteredArticles}/>
