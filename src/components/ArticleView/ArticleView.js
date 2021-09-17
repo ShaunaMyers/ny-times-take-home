@@ -14,7 +14,7 @@ const ArticleView = ({ article }) => {
             <div className="left-article-view">
                 <img src={article.multimedia[0].url} alt="caption here"/>
             </div>
-            <div className="right-article-view">
+            <div className="full-article-view">
                 <h3>{article.title}</h3>
                 <p className="small-details">{article.byline}</p>
                 <p className="small-details">{formatDate()}</p>
