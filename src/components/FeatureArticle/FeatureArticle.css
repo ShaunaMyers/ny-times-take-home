@@ -17,3 +17,9 @@
   text-align: center;
   width: 700px;
 }
+
+@media only screen and (max-width: 1250px) {
+  .feature-article-section > h2 {
+    width: 500px;
+  }
+}
