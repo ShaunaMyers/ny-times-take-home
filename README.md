@@ -12,8 +12,6 @@ To view our application on your local device:
      -cd into ny-times-take-home
      -Run npm i in your terminal
      -Run npm start in your terminal
-     -To view Cypress tests open a separate tab in your terminal and run npm run cypress
-     -You do not need to clone our API as it is already deployed to Heroku
 
 
 ## Functionality
